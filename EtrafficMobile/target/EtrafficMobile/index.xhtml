@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+    <h:head>
+        <title>Etraffic mobile</title>
+        <meta name="Fernando Casaban"></meta>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css"/>
+
+    	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+ 	    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+ 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ 	    
+ 	    <script src="scripts/service-worker.js"></script>
+ 	    <script src="scripts/push.js"></script>
+ 	    
+ 	    <script src="scripts/leaflet.geometryutil.js"></script>
+ 	    <style>
+ 	    	body {
+				padding: 0;
+			    margin: 0;
+			}
+			html, body, #mapid {
+			    height: 100%;
+			    width: 100vw;
+			}
+			
+			
+ 	    </style>
+    </h:head>
+    
+    <h:body>
+    	<div id="mapid"></div>
+		<div class="leaflet-bottom leaflet-right" style="padding: 5%;">
+        	<b:button iconAwesome="plane" value="  Volver" onclick="focusView()" look="info" title="center view" />
+        </div>
+       	<script src="scripts/mapManager.js"></script>
+    </h:body>
+</html>
